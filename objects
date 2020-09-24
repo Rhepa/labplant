@@ -1,0 +1,40 @@
+using System.Collections;
+using System.Collections.Generic;
+using System.Security.Cryptography;
+using UnityEngine;
+
+public class tools : MonoBehaviour
+{
+    public Transform selectObj;
+
+
+    void OnMouseDown() {
+
+        if (gameObject.name == "shovel") 
+        {
+            GMscript.currentTool = "shovel";
+        }
+
+        if (gameObject.name == "seed")
+        {
+            GMscript.currentTool = "seed";
+            
+        }
+
+
+        if (gameObject.name == "bucket")
+        {
+            GMscript.currentTool = "bucket";
+        }
+
+        if (gameObject.name == "key")
+        {
+            GMscript.currentTool = "key";
+        }
+
+        selectObj.transform.position = transform.position;
+
+
+    }
+
+}
